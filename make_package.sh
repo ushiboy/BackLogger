@@ -8,9 +8,6 @@ rm -rf package/*;
 mkdir -p package/web/;
 
 # ビルド
-cd scala;
-sbt fullOptJS;
-cd ../;
 cd web;
 npm run build;
 cd ../;
