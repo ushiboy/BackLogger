@@ -4,18 +4,24 @@
   "author": "Shinpei Maruyama",
   "license": "MIT",
   "scripts": {
+    "start": "npm run clean && cp src/index.html build/index.html && webpack-dev-server",
     "build": "npm run clean && cp src/index.html build/index.html && webpack",
     "watch": "npm run clean && cp src/index.html build/index.html && webpack -w",
     "clean": "rm -rf build/*"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
     "babel-preset-es2017": "^6.24.1",
     "css-loader": "^0.28.7",
+    "eslint": "^4.7.2",
+    "flow-bin": "^0.55.0",
     "vue-loader": "^13.0.4",
     "vue-template-compiler": "^2.4.2",
-    "webpack": "^3.5.6"
+    "webpack": "^3.5.6",
+    "webpack-dev-server": "^2.8.2"
   },
   "dependencies": {
     "vue": "^2.4.2",

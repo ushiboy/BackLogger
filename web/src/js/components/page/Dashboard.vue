@@ -70,12 +70,10 @@
     import base from './base'
     import IssueList from './Dashboard/partial/IssueList.vue'
 
-    import {
-        ProjectQuery,
-        InitializeDashboardCommand,
-        DashboardEvents,
-        NetworkEvents
-    } from '../../../../../scala/target/scala-2.12/backlogger-opt'
+    import DashboardEvents from '../../domain/events/DashboardEvents.js';
+    import ProjectQuery from '../../application/query/project/ProjectQueryImpl.js';
+    import InitializeDashboardCommand from '../../application/command/dashboard/InitializeDashboardCommand.js';
+    import NetworkEvents from '../../domain/events/NetworkEvents.js';
 
     export default {
         mixins: [base],

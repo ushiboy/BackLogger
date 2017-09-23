@@ -78,7 +78,9 @@
     </div>
 </template>
 <script>
-    import {SaveSettingCommand, SettingQuery, SettingEvents} from '../../../../../scala/target/scala-2.12/backlogger-opt'
+    import SettingQuery from '../../application/query/setting/SettingQueryImpl.js';
+    import SaveSettingCommand from '../../application/command/setting/SaveSettingCommandImpl.js';
+    import SettingEvents from '../../domain/events/SettingEvents.js';
 
     import base from './base'
 

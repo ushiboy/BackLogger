@@ -10,7 +10,7 @@
     </div>
 </template>
 <script>
-    import {SettingQuery} from '../../../../../scala/target/scala-2.12/backlogger-opt'
+    import SettingQuery from '../../application/query/setting/SettingQueryImpl.js';
 
     import base from './base'
 

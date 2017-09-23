@@ -203,16 +203,14 @@
     </div>
 </template>
 <script>
-    import {
-        LoadIssuesCommand,
-        MakeIssueStatusAsUntreatedCommand,
-        MakeIssueStatusAsProcessingCommand,
-        MakeIssueStatusAsProcessedCommand,
-        CloseIssueCommand,
-        IssueEvents,
-        IssueQuery,
-        SettingQuery
-    } from '../../../../../../../scala/target/scala-2.12/backlogger-opt'
+    import IssueEvents from '../../../../domain/events/IssueEvents.js';
+    import LoadIssuesCommand from '../../../../application/command/dashboard/LoadIssuesCommandImpl.js';
+    import SettingQuery from '../../../../application/query/setting/SettingQueryImpl.js';
+    import IssueQuery from '../../../../application/query/issue/IssueQueryImpl.js';
+    import MakeIssueStatusAsUntreatedCommand from '../../../../application/command/dashboard/MakeIssueStatusAsUntreatedCommandImpl.js';
+    import MakeIssueStatusAsProcessingCommand from '../../../../application/command/dashboard/MakeIssueStatusAsProcessingCommandImpl.js';
+    import MakeIssueStatusAsProcessedCommand from '../../../../application/command/dashboard/MakeIssueStatusAsProcessedCommandImpl.js';
+    import CloseIssueCommand from '../../../../application/command/dashboard/CloseIssueCommandImpl.js';
 
     import base from '../../base'
 

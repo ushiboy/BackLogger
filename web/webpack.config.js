@@ -10,13 +10,24 @@ const config = {
     devtool: 'source-map',
     module: {
         rules: [
-            { test: /\.js$/, exclude: /(node_modules|backlogger-opt)/, loader: "babel-loader" },
+            { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" },
             { test: /\.vue$/, loader: 'vue-loader'}
         ]
     },
     resolve: {
         alias: {
             vue: 'vue/dist/vue.js',
+        }
+    },
+    devServer: {
+        contentBase: './build',
+        inline: true,
+        host: '127.0.0.1',
+        port: 8080,
+        stats: {
+            version: false,
+            hash: false,
+            chunkModules: false
         }
     }
 };
